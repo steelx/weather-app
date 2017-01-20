@@ -20,16 +20,16 @@
 </head>
 <body>
 
-<body ng-app="weatherApp" ng-controller="weatherCtrl">
+<body ng-app="weatherApp" ng-controller="weatherController as weatherCtrl">
 <div class="content container-fluid">
   <section class="row">
     <div class="header">
       <h1>Angular JS openweathermap</h1>
-      <select class="city-select form-control" id="city-select" ng-model="currentCity" ng-init="cityChanged()" ng-change="cityChanged()" ng-options="city as city for city in cities"></select>
+      <select class="city-select form-control" id="city-select" ng-model="weatherCtrl.currentCity" ng-init="weatherCtrl.cityChanged()" ng-change="weatherCtrl.cityChanged()" ng-options="city as city for city in weatherCtrl.cities"></select>
       <button class="btn btn-success" type="button" add-city-modal="">Add city</button>
       <p class="city-info">
-        <span class="city-name">City: {{currentWeather.city.name}}</span>
-        <span class="coordinates small">Coordinates: Lon {{currentWeather.city.coord.lat}}, Lat {{currentWeather.city.coord.lon}}</span>
+        <span class="city-name">City: {{weatherCtrl.currentWeather.city.name}}</span>
+        <span class="coordinates small">Coordinates: Lon {{weatherCtrl.currentWeather.city.coord.lat}}, Lat {{weatherCtrl.currentWeather.city.coord.lon}}</span>
         <span class="map">
 
         </span>
@@ -38,7 +38,7 @@
   </section>
 
   <section class="row">
-    <div class="col-md-3" ng-repeat="day in currentWeather.list" city-forecast="" current-weather="day"></div>
+    <div class="col-md-3" ng-repeat="day in weatherCtrl.currentWeather.list" city-forecast="" current-weather="day"></div>
   </section>
 
 </div>

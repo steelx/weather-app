@@ -1,19 +1,19 @@
 
 angular.module('weatherApp')
-	.controller('weatherCtrl', [
+	.controller('weatherController', [
         '$scope', '$http', '$uibModal', 'weatherService',
         function($scope, $http, $uibModal, weatherService) {
+			var weatherCtrl = this;
+            weatherCtrl.cities = ["Mumbai", "New York", "California"];
+            weatherCtrl.currentCity = "Mumbai";
+            weatherCtrl.weatherDate = new Date();
+            weatherCtrl.weatherDateDay = new Date();
 
-            $scope.cities = ["Mumbai", "New York", "California"];
-            $scope.currentCity = "Mumbai";
-            $scope.weatherDate = new Date();
-            $scope.weatherDateDay = new Date();
-
-            $scope.cityChanged = function cityChanged(){
-                weatherService.getForecast($scope.currentCity)
+            weatherCtrl.cityChanged = function cityChanged(){
+                weatherService.getForecast(weatherCtrl.currentCity)
                     .then(
                         function (response) {
-                            $scope.currentWeather = response.data;
+                            weatherCtrl.currentWeather = response.data;
                         },
                         function(reject){
                             console.log(reject);
@@ -25,7 +25,7 @@ angular.module('weatherApp')
                 addNewCity(city);
             });
             function addNewCity(newCity) {
-                $scope.cities.push(newCity);
+                weatherCtrl.cities.push(newCity);
             }
         }
 	]
