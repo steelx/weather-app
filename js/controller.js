@@ -1,4 +1,3 @@
-
 angular.module('weatherApp')
 	.controller('weatherController', [
         '$scope', '$http', '$uibModal', 'weatherService',
