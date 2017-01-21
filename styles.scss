@@ -2,9 +2,8 @@
 	max-width: 1200px;
 	margin: 0 auto;
 	.header{
-		padding: 20px;
+		padding: 20px 0;
 		text-align: left;
-		border-radius: 15px;
 	}
 	.city-select{
 		width: auto;
@@ -19,20 +18,17 @@
 		}
 	}
 	.forecast-day {
-		border-radius: 7px;
 		margin-bottom: 20px;
 
 		.day-header{
 			padding: 15px;
 			background: #337ab7;
 			color: white;
-			border-radius: 7px 7px 0 0;	
 		}
 		.day-footer{
 			padding: 15px;
 			border-top: 1px solid gray;
 			background: #F2F2F2;
-			border-radius: 0 0 7px 7px;			
 		}
 		.day-content{
 			padding: 15px;
