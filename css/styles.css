@@ -1,8 +1,12 @@
+body {
+  background-color: #1B676B; }
+
 .content {
   max-width: 1200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background: #ffffff; }
   .content .header {
-    padding: 20px 0;
+    padding: 20px 0 0;
     text-align: left; }
   .content .city-select {
     width: auto;
@@ -17,14 +21,15 @@
     margin-bottom: 20px; }
     .content .forecast-day .day-header {
       padding: 15px;
-      background: #337ab7;
-      color: white; }
+      background: #88C425;
+      color: #ffffff; }
     .content .forecast-day .day-footer {
       padding: 15px;
-      border-top: 1px solid gray;
-      background: #F2F2F2; }
+      border-top: 1px solid #EDE574;
+      background: #EAFDE6; }
     .content .forecast-day .day-content {
-      padding: 15px; }
+      padding: 15px;
+      background-color: #ffffff; }
       .content .forecast-day .day-content .day-pic {
         width: 80px; }
       .content .forecast-day .day-content .main-props {
