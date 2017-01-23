@@ -5,7 +5,7 @@ Simple weather app made with love and AngularJs, SASS-Bootstrap, Gulp
 
 1. App structure is simple, inside JS folder, each folder contains JS dependencies for that current module.
 2. Single Responsibility: Since I have only 1 controller and service I didnt create more folders, otherwise I usually create a FOLDER for each controller and its dependencies in it.
-3. IIFE (JavaScript Scopes): Rather than wrapping Angular components in an Immediately Invoked Function Expression (IIFE), I use angular.module everytime so the global scope is not voilated, I prefer angular.module over IIFEs.
+3. IIFE (JavaScript Scopes): Rather than wrapping Angular components in an Immediately Invoked Function Expression (IIFE), I use angular.module. I prefer angular.module over IIFEs (both are good for hidding scope from globally)
 4. controllerAs View Syntax: Helps avoid using $parent calls in Views with nested controllers, promotes proper namespacing `weatherCtrl.currentCity`, `controllerAs` is more closer to the Javascript classic constructor than `$scope syntax`
 5. Defer Controller Logic to Services
 6. Services: `.service` are instantiated with the `new` keyword, since these are so similar to factories, I use `.factory` instead for consistency.
