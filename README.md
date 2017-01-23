@@ -1,5 +1,5 @@
 # Weather APP
-Simple weather app made with love and AngularJs, SASS-Bootstrap, Gulp
+Simple weather app made with love and AngularJs 1.6, SASS, Bootstrap, Gulp
 
 ### Ajinkya Borade
 
@@ -16,7 +16,7 @@ Thank you.
 
 ### HOW TO:
 To make AJAX requests you need a local server.
-Just open the folder with local server, `cd` to the director and run: `http-server`
+Just open the folder with local-server, `cd` to the directory and run: `http-server`
 
 Make sure you have http-server install globally via NPM:
 `npm install -g http-server`
